@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ survey.title }}</h2>
+<p>{{ survey.description }}</p>
+<!-- <a href="{{ url_for('question', qid=0) }}">Start Survey</a> -->
+<form action="{{ url_for('start_survey') }}" method="post">
+    <button type="submit">Start Survey</button>
+    </form>
+{% endblock %}

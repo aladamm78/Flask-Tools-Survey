@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Survey Responses</h2>
+<ul>
+    {% for response in responses %}
+        <li>{{ response }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}">Back to Survey</a>
+{% endblock %}
